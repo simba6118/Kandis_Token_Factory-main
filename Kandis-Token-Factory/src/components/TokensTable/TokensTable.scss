@@ -1,0 +1,61 @@
+@import '../../styles/styles.scss';
+
+.TokensTable {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+    background-color: transparent !important;
+    background-image: none !important;
+    
+    .TokenRow {
+        // height: 100px;
+        transition: background-color 0.25s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .DescriptionTableCell {
+
+            >div {
+                max-height: 94px;
+                overflow: auto;
+            }
+        }
+
+        .image-size {
+
+            @media only screen and (min-width: 10px) {
+                max-width: 20px;
+                max-height: 20px;
+            }
+
+            @media only screen and (min-width: 375px) {
+                max-width: 20px;
+                max-height: 20px;
+            }
+        
+            @media only screen and (min-width: 600px) {
+                max-width: 20px;
+                max-height: 20px;
+            }
+        
+            @media only screen and (min-width: 768px) {
+                max-width: 35px;
+                max-height: 35px;
+            }
+
+            @media only screen and (min-width: 1024) {
+                max-width: 50px;
+                max-height: 50px;
+            }
+        }
+    }
+    
+    .TokenPagination {
+        min-height: 64px;
+        overflow: visible;
+    }
+}
